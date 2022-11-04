@@ -34,6 +34,14 @@
                 <updatePolicy>never</updatePolicy>
             </snapshots>
         </repository>
+        <repository>
+            <id>maven-group</id>
+            <url>http://172.16.40.43:8081/repository/maven-public/</url>
+        </repository>
+        <repository>
+            <id>maven-snapshots-sivicos</id>
+            <url>http://172.16.40.43:8081/repository/maven-snapshots/</url>
+        </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
@@ -64,6 +72,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>co.com.tramites.canonicalmodel</groupId>
+            <artifactId>canonical-model</artifactId>
+            <version>0.0.1</version>
         </dependency>
     </dependencies>
 
@@ -96,7 +109,7 @@
             </plugin>
         </plugins>
     </build>
-<!--    <profiles>
+    <profiles>
         <profile>
             <id>openshift</id>
             <build>
@@ -117,7 +130,7 @@
                 </plugins>
             </build>
         </profile>
-    </profiles>-->
+    </profiles>
 
 
 </project>
